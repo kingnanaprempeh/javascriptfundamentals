@@ -15,14 +15,14 @@
 // Declaring an Array
 // let carMiles = [1, 2, 444, 555, 667, 88];
 
-// Array Deconstruction
+// Array Destructuring
 // let [car1, car2, car3, car4, car5, car6] = carMiles;
 
 // console.log( car1, car2, car3, car4, car5 );
 // /////////////////
 
-// Array Deconstruction with extra variables
-//let carMiles = [1, 2, 3, 4, 5, 6];
+// Array Destructuring with extra variables
+// let carMiles = [1, 2, 3, 4, 5, 6];
 // let car1, remainingCars;
 // [car1, ...remainingCars] = carMiles;
 // console.log(car1, ...remainingCars);
@@ -33,9 +33,15 @@
 // [ ...remainingCars] = carMiles;
 // console.log(remainingCars);
 
-// Declaring only two variables will deconstruct only 
-// two variables.
+// Declaring only two variables while Destructuring
+// only two variables.
+// let carMiles = [1, 2, 3, 4, 5, 6];
+// let car1, remainingCars;
+// [car1, ...remainingCars] = carMiles;
+// console.log(car1, remainingCars);
+
+// Destructuring and leaving one variable out
 let carMiles = [1, 2, 3, 4, 5, 6];
-let car1, remainingCars;
-[car1, remainingCars] = carMiles;
-console.log(car1,remainingCars);
+let car1, car2, remainingCars;
+[, car2, ...remainingCars] = carMiles;
+console.log(car2, remainingCars);
